@@ -3,6 +3,8 @@ apiVersion: v1
 kind: Service
 metadata:
   name: {{ template "fullname" . }}
+  annotations:
+    taliberty: "true"
   labels:
     app: {{ template "fullname" . }}
     chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}
